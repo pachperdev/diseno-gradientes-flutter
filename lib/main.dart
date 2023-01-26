@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'diseno_gradientes_flutter',
+      theme: ThemeData.dark(),
       initialRoute: 'home_screen',
       routes: {
         'home_screen': (context) => const HomeScreen(),
