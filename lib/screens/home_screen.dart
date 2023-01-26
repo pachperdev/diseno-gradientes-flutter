@@ -1,3 +1,4 @@
+import 'package:diseno_gradientes_flutter/widgets/card_table.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/widgets.dart';
@@ -25,8 +26,13 @@ class _HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: Column(
-        children: const [PageTitle()],
+        children: const [
+          PageTitle(),
+          CardTable(),
+          SizedBox(height: 50),
+        ],
       ),
     );
   }
@@ -40,7 +46,7 @@ class PageTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 60, horizontal: 30),
+      margin: const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
